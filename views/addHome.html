@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add Home to airbnb</title>
-  </head>
-  <body>
-    <header>
-      <h1>Register your home here:</h1>
-    </header>
-    <main>
-      <form action="/host/add-home" method="POST">
-        <input
-          type="text"
-          name="houseName"
-          placeholder="Enter the name of your house"
-        />
-        <input type="submit" />
-      </form>
-    </main>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Add Home to airbnb</title>
+</head>
+
+<body>
+  <nav class="bg-zinc-100 flex justify-between items-center p-4">
+    <div class="flex justify-center items-center gap-1">
+      <img width="48" height="48" src="https://img.icons8.com/color/48/airbnb.png" alt="airbnb" />
+      <h1 class="text-2xl">airbnb</h1>
+    </div>
+    <div class="flex gap-4 mr-8">
+      <a href="/">Go to Home</a>
+      <a class="" href="/host/add-home">Add Home</a>
+    </div>
+  </nav>
+  <main class="m-20 text-center p-40 bg-zinc-50 shadow-2xl">
+    <h1 class="p-4 text-3xl text-center">Register your home here:</h1>
+    <form action="/host/add-home" method="POST">
+      <input class="p-4 rounded-2xl" type="text" name="houseName" placeholder="Enter the house name" />
+      <br>
+      <input class="mt-4 bg-red-400 rounded-2xl p-4 text-lg text-white" type="submit" />
+    </form>
+  </main>
+</body>
+
 </html>
