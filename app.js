@@ -3,6 +3,7 @@ const path = require("path");
 
 // External Module
 const express = require("express");
+const bodyParser = require("body-parser");  // Add this line
 
 //Local Module
 const userRouter = require("./routes/userRouter");
@@ -11,7 +12,7 @@ const rootDir = require("./utils/pathUtil");
 
 const app = express();
 
-app.use(express.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(userRouter);
 app.use("/host", hostRouter);
 
